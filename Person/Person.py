@@ -50,9 +50,9 @@ class Person:
       self.eye2.undraw()
       self.mouth.undraw()
   def getLength(self):
-    print(self.length)
+    return self.length
   def getWidth(self):
-    print(self.width)
+    return self.width
   def move(self,dx,dy):
     self.circle.move(dx,dy)
     self.body.move(dx,dy)
@@ -71,4 +71,4 @@ person1 = Person(50,100,10,20,10,10)
 person2 = Person(100,200,10,20,10,10)
 person1.move(100,0)
 #person1.draw(win)
-person1.getLength()
+print(person1.getLength())
