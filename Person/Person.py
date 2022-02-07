@@ -31,6 +31,10 @@ class Person:
     if (brows == "|"):
       self.brow1 = Line(Point(x-(headRadius/2)-(0.2*headRadius),y-(headRadius/2)-(0.1*headRadius)),Point(x-(headRadius/2)+(0.2*headRadius),y-(headRadius/2)-(0.1*headRadius)))
       self.brow2 = Line(Point(x+(headRadius/2)-(0.2*headRadius),y-(headRadius/2)-(0.1*headRadius)),Point(x+(headRadius/2)+(0.2*headRadius),y-(headRadius/2)-(0.1*headRadius)))
+    elif (brows == "/"):
+      self.brow1 = Line(Point(x-(headRadius/2)-(0.4*headRadius)*0.7,y-(headRadius/2)-(0.1*headRadius)-((0.4*headRadius)*0.7)),Point(x-(headRadius/2)+(0.1*headRadius),y-(headRadius/2)-(0.1*headRadius)))
+      self.brow2 = Line(Point(x+(headRadius/2)+(0.4*headRadius)*0.7,y-(headRadius/2)-((0.4*headRadius)*0.7)-(0.1*headRadius)),Point(x+(headRadius/2)-(0.1*headRadius),y-(headRadius/2)-(0.1*headRadius)))
+    #eyelashes?
     else:
       self.brows=0
   def draw(self,window):
@@ -82,7 +86,7 @@ class Person:
   #def setFace()
     
 win = GraphWin("person",500,500)
-person1 = Person(50,100,20,20,10,10,":|","|")
+person1 = Person(50,100,20,20,10,10,":|","/")
 person2 = Person(100,200,10,20,10,10)
 person1.move(100,0)
 person1.draw(win)
